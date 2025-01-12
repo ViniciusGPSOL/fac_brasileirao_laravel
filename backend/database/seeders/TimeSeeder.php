@@ -13,32 +13,32 @@ class TimeSeeder extends Seeder
     public function run(): void
     {
         $times = [
-            ['id' => 1, 'nome' => 'Avaí FC'],
-            ['id' => 2, 'nome' => 'Fluminense'],
-            ['id' => 3, 'nome' => 'São Paulo'],
-            ['id' => 4, 'nome' => 'Coritiba FC'],
-            ['id' => 5, 'nome' => 'Atlético-GO'],
-            ['id' => 6, 'nome' => 'Atlético-MG'],
-            ['id' => 7, 'nome' => 'Fortaleza'],
-            ['id' => 8, 'nome' => 'Juventude'],
-            ['id' => 9, 'nome' => 'Palmeiras'],
-            ['id' => 10, 'nome' => 'Botafogo'],
-            ['id' => 11, 'nome' => 'Goiás'],
-            ['id' => 12, 'nome' => 'Cuiabá-MT'],
-            ['id' => 13, 'nome' => 'América-MG'],
-            ['id' => 14, 'nome' => 'Corinthians'],
-            ['id' => 15, 'nome' => 'Athletico-PR'],
-            ['id' => 16, 'nome' => 'RB Bragantino'],
-            ['id' => 17, 'nome' => 'Santos'],
-            ['id' => 18, 'nome' => 'Flamengo'],
-            ['id' => 19, 'nome' => 'Ceará SC'],
-            ['id' => 20, 'nome' => 'Internacional']
+            ['nome' => 'Avaí FC', 'estadio' => 'Estádio da Ressacada', 'cidade' => 'Florianópolis'],
+            ['nome' => 'Fluminense', 'estadio' => 'Maracanã', 'cidade' => 'Rio de Janeiro'],
+            ['nome' => 'São Paulo', 'estadio' => 'Morumbi', 'cidade' => 'São Paulo'],
+            ['nome' => 'Coritiba FC', 'estadio' => 'Couto Pereira', 'cidade' => 'Curitiba'],
+            ['nome' => 'Atlético-GO', 'estadio' => 'Antônio Accioly', 'cidade' => 'Goiânia'],
+            ['nome' => 'Atlético-MG', 'estadio' => 'Mineirão', 'cidade' => 'Belo Horizonte'],
+            ['nome' => 'Fortaleza', 'estadio' => 'Castelão', 'cidade' => 'Fortaleza'],
+            ['nome' => 'Juventude', 'estadio' => 'Alfredo Jaconi', 'cidade' => 'Caxias do Sul'],
+            ['nome' => 'Palmeiras', 'estadio' => 'Allianz Parque', 'cidade' => 'São Paulo'],
+            ['nome' => 'Botafogo', 'estadio' => 'Nilton Santos', 'cidade' => 'Rio de Janeiro'],
+            ['nome' => 'Goiás', 'estadio' => 'Serrinha', 'cidade' => 'Goiânia'],
+            ['nome' => 'Cuiabá-MT', 'estadio' => 'Arena Pantanal', 'cidade' => 'Cuiabá'],
+            ['nome' => 'América-MG', 'estadio' => 'Independência', 'cidade' => 'Belo Horizonte'],
+            ['nome' => 'Corinthians', 'estadio' => 'Neo Química Arena', 'cidade' => 'São Paulo'],
+            ['nome' => 'Athletico-PR', 'estadio' => 'Arena da Baixada', 'cidade' => 'Curitiba'],
+            ['nome' => 'RB Bragantino', 'estadio' => 'Nabi Abi Chedid', 'cidade' => 'Bragança Paulista'],
+            ['nome' => 'Santos', 'estadio' => 'Vila Belmiro', 'cidade' => 'Santos'],
+            ['nome' => 'Flamengo', 'estadio' => 'Maracanã', 'cidade' => 'Rio de Janeiro'],
+            ['nome' => 'Ceará SC', 'estadio' => 'Castelão', 'cidade' => 'Fortaleza'],
+            ['nome' => 'Internacional', 'estadio' => 'Beira-Rio', 'cidade' => 'Porto Alegre']
         ];
 
         foreach ($times as $time) {
             Time::updateOrCreate(
-                ['id' => $time['id']],
-                ['nome' => $time['nome']]
+                ['nome' => $time['nome']],
+                ['estadio' => $time['estadio'], 'cidade' => $time['cidade']]
             );
         }
     }

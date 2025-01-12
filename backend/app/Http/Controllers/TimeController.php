@@ -17,7 +17,9 @@ class TimeController extends Controller
     public function store(Request $request): JsonResponse
     {
         $validated = $request->validate([
-            'nome' => 'required|string|max:128'
+            'nome' => 'required|string|max:128',
+            'estadio' => 'nullable|string|max:128',
+            'cidade' => 'nullable|string|max:128'
         ]);
 
         $time = Time::create($validated);
@@ -32,7 +34,9 @@ class TimeController extends Controller
     public function update(Request $request, Time $time): JsonResponse
     {
         $validated = $request->validate([
-            'nome' => 'required|string|max:128'
+            'nome' => 'required|string|max:128',
+            'estadio' => 'nullable|string|max:128',
+            'cidade' => 'nullable|string|max:128'
         ]);
 
         $time->update($validated);
