@@ -13,6 +13,8 @@ return new class extends Migration {
         Schema::create('times', function (Blueprint $table): void {
             $table->id();
             $table->string(column: 'nome', length: 128);
+            $table->string(column: 'estadio', length: 128)->nullable();
+            $table->string(column: 'cidade', length: 128)->nullable();
             $table->timestamps();
         });
     }
