@@ -12,7 +12,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request): m
 
 Route::apiResource('times', TimeController::class);
 Route::apiResource('partidas', PartidaController::class);
-Route::get('partidas/by-date', [PartidaController::class, 'getByDate']);
-Route::get('partidas/by-team', [PartidaController::class, 'getByTeam']);
+Route::get('partidas-by-date', [PartidaController::class, 'getByDate']);
+Route::get('partidas-by-team', [PartidaController::class, 'getByTeam']);
 Route::get('classificacao', [ClassificacaoController::class, 'index']);
 Route::get('classificacao/historico', [ClassificacaoController::class, 'getHistorico']);

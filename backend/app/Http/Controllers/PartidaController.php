@@ -32,7 +32,7 @@ class PartidaController extends Controller
             'gols_time_casa' => 'required|integer|min:0',
             'id_time_visitante' => 'required|exists:times,id|different:id_time_casa',
             'gols_time_visitante' => 'required|integer|min:0',
-            'estadio' => 'required|string|max:128'
+            'estadio' => 'nullable|string|max:128'
         ]);
 
         try {

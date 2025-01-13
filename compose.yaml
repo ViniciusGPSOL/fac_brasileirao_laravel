@@ -1,4 +1,14 @@
 services:
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   container_name: rio_frontend
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8000:8000"
+  #   networks:
+  #     - app-network
   app:
     build:
       context: ./backend
