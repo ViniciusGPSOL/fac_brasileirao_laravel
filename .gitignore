@@ -2,5 +2,3 @@ venv
 /venv
 pycache
 /pycache
-env
-.env
